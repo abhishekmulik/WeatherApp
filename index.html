@@ -1,30 +1,69 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width-device-width, initial-scale-1.0">
-        <link rel="stylesheet" href="style.css">
-        <title>Weather App</title>
-    </head>
-    <body>
-        <div class="map-main">
-            <div class="searchInputBox">
-                <input type="text" id="input-box" class="input-box" placeholder="Enter City Name..."autocomplete="off">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width, initial-scale-1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #72edf2 10%, #5151e5 100%);
+
+        }
+    </style>
+    <title>Weather App</title>
+</head>
+
+<body class="backimg img-responsive">
+    <div class="container">
+        <div class="weather-side col-lg-5">
+            <div class="weather-gradient"></div>
+            <div class="date-container">
+                <h2 class="date-dayname">Thursday</h2><span class="date-day">10 July 2020</span><i class="location-icon"
+                    data-feather="map-pin"></i><span class="location">Pune, IN</span>
             </div>
-            <div class="weather-body">
-                <div class="loaction-details">
-                    <div class="city" id="city">Pune, IN</div>
-                    <div class="date" id="date">10 jan (thursday), 2020</div>
-                </div>
-
-                <div class="weather-status">
-                    <div class="temp" id="temp">34&deg;C</div>
-                    <div class="min-max" id="min-max">33&deg;C (min) / 38&deg;C (max)</div>
-                    <div class="weather" id="weather">Clear</div>
-                    <div class="img" id="img"></div>
-                </div>
-
+            <div class="weather-container"><i class="weather-icon" data-feather="sun"></i>
+                <h1 class="weather-temp">20°C</h1>
+                <h3 class="weather-desc">Cloudy</h3>
             </div>
         </div>
-    </body>
+        <div class="info-side col-lg-5">
+            <div class="today-info-container">
+                <div class="today-info">
+                    <div class="precipitation"> <span class="title">PRECIPITATION</span><span class="value">70 %</span>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="humidity"> <span class="title">HUMIDITY</span><span class="value">34 %</span>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="wind"> <span class="title">WIND</span><span class="value">10 km/h</span>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="week-container">
+                <ul class="week-list">
+                    <li><i class="day-icon fa fa-sun-o " style="font-size:40px"></i><span
+                            class="day-name">Tue</span><span class="day-temp">21°C</span></li>
+                    <li><i class="day-icon fa fa-tint" style="font-size:40px"></i><span class="day-name">Wed</span><span
+                            class="day-temp">18°C</span></li>
+                    <li class="active"><i class="day-icon fa fa-cloud" style="font-size:40px"></i><span
+                            class="day-name">Thu</span><span class="day-temp">20°C</span></li>
+                    <li><i class="day-icon fa fa-umbrella" style="font-size:40px"></i><span
+                            class="day-name">Fri</span><span class="day-temp">19°C</span></li>
+                    <li><i class="day-icon fa fa-sun-o" style="font-size:40px"></i><span
+                            class="day-name">Sat</span><span class="day-temp">18°C</span></li>
+                    <div class="clear"></div>
+                </ul>
+            </div>
+            <div class="location-container"><button class="button-search"> <i data-feather="map-pin"></i><input
+                        class="location-button" placeholder="Enter city name..."></button></div>
+        </div>
+    </div>
+</body>
+
 </html>
